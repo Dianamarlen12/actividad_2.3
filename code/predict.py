@@ -1,8 +1,8 @@
 import sklearn
 from joblib import load
 
-
 model = load("model.joblib")
+
 while True:
     xs = []
     x = int(input("x:"))
