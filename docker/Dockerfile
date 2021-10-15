@@ -1,13 +1,13 @@
-FROM ubuntu:20.4
+FROM ubuntu:20.04
 
 RUN apt-get update
-RUN apt-get updgrade
-RUN apt-get install -y pyton3
+RUN apt-get upgrade -y
+RUN apt-get install -y python3
 RUN apt-get install -y python3-pip
 RUN apt-get clean
 
-ENV requeriments /home/requeriments.txt
+ENV requirements /home/requirements.txt
 
-COPY requeriments.txt ${requeriments}
+COPY requirements.txt ${requirements}
 
-RUN pip3 install -r /home/requeriments.txt
+RUN pip3 install -r /home/requirements.txt
